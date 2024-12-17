@@ -1,0 +1,94 @@
+nav {
+    background-color: rgb(239, 241, 237);
+}
+
+.nav-link {
+    color: rgb(48, 66, 84);
+}
+
+header {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    background: rgb(245, 248, 243);
+}
+
+.get-in-touch {
+    background: rgb(45, 173, 157);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* edit font family to seriff or something */
+.about-me {
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    font-kerning: none;
+    text-decoration: none;
+    font-family: "YAFdJt8dAY0 0", "auto";
+    font-size: 52.6667px;
+    color: rgb(0, 0, 0);
+    line-height: 52px;
+    letter-spacing: -0.02em;
+}
+
+.left-flex-item {
+    display: flex;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.rel {
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .header-content {
+        order: 2;
+    }
+
+    .header-img {
+        order: 1;
+    }
+}
+
+.snake {
+    border-radius: 8%;
+}
+
+.item-center {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.frame-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.frame-text {
+    position: absolute;
+    text-align: center;
+}
