@@ -92,3 +92,93 @@ header {
     position: absolute;
     text-align: center;
 }
+
+/* main {
+    background: rgb(239, 241, 237);
+    background-image: url("../assets/whirlpool.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15rem;
+    padding-top: 15rem;
+} */
+
+main {
+    position: relative;
+    background: rgb(239, 241, 237);
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../assets/whirlpool.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* .main-container {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15rem;
+    padding-top: 15rem;
+    position: relative;
+    z-index: 1;
+} */
+
+.main-container {
+    padding-left: 20em;
+    padding-right: 20em;
+    gap: 15px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    position: relative;
+    z-index: 1;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        grid-template-rows: repeat(3, 1fr);;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+.card-img {
+    width: 180px;
+    height: 200px;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
