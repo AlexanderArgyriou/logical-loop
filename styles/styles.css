@@ -120,7 +120,7 @@ main::before {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
     grid-template-columns: repeat(3, minmax(250px, 1fr));
     position: relative;
     z-index: 1;
@@ -192,7 +192,7 @@ main::before {
     .main-container {
         padding-top: 0;
         padding-bottom: 0;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: 0.5fr repeat(3, 1fr);
         grid-template-columns: 1fr;
         gap: 5px;
         padding-left: 5rem;
@@ -202,4 +202,16 @@ main::before {
     .skillz-title {
         grid-column-start: span 1;
     }
+}
+
+.prog-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
