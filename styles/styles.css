@@ -93,23 +93,6 @@ header {
     text-align: center;
 }
 
-/* main {
-    background: rgb(239, 241, 237);
-    background-image: url("../assets/whirlpool.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.3;
-}
-
-.main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 15rem;
-    padding-top: 15rem;
-} */
-
 main {
     position: relative;
     background: rgb(239, 241, 237);
@@ -130,17 +113,6 @@ main::before {
     z-index: 0;
 }
 
-/* .main-container {
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 15rem;
-    padding-top: 15rem;
-    position: relative;
-    z-index: 1;
-} */
-
 .main-container {
     padding-left: 20em;
     padding-right: 20em;
@@ -148,24 +120,15 @@ main::before {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(3, minmax(250px, 1fr));
     position: relative;
     z-index: 1;
-    padding-top: 15rem;
     padding-bottom: 15rem;
 }
 
-@media (max-width: 768px) {
-    .main-container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        grid-template-rows: repeat(3, 1fr);;
-        grid-template-columns: 1fr;
-        gap: 5px;
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
+.skillz-title {
+    grid-column-start: span 3;
 }
 
 .card-img {
@@ -173,8 +136,11 @@ main::before {
     height: 200px;
 }
 
-.card {
+.glass {
     box-shadow: inset 0 0 15px rgba(135, 135, 135, .1), 0 0 18px 3px rgba(0, 0, 0, .3);
+}
+
+.card {
     padding: 10px;
     border: none;
     background-color: transparent;
@@ -183,4 +149,57 @@ main::before {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.magic {
+    width: 50px;
+    height: 50px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#neon {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #231557 0%,
+            #c7c1ce 29%,
+            #29141b 67%,
+            #00ff80 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding-top: 0;
+        padding-bottom: 0;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .skillz-title {
+        grid-column-start: span 1;
+    }
 }
